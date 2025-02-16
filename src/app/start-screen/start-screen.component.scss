@@ -1,0 +1,76 @@
+.start-screen {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url("../../assets/img/background/startscreen.jpg");
+    object-fit: cover;
+}
+
+.start-screen-overlay {
+    width: 400px;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    // font-size: 30;
+    font-weight: bold;
+ 
+    >h1,h2 {
+        margin-bottom: 70%;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 4px;
+        text-align: center;
+        color: #ffcc00;
+        text-shadow:
+            0 0 5px rgba(255, 204, 0, 0.8),
+            0 0 10px rgba(255, 204, 0, 0.6),
+            0 0 15px rgba(255, 204, 0, 0.4);
+        animation: glow 1.5s infinite alternate;
+    }
+    .label {
+        background-image: url("../../assets/img/background/label1.png");
+        width: 366px;
+        height: 205px; 
+        background-size: cover;
+        background-position: center; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem; 
+        background-color: rgb(135 146 128 / 70%);
+        border-radius: 60px;
+    }
+}
+h2{
+    margin-bottom: 0% !important;
+    font-size: 2rem!important;
+    font-weight: 600!important;
+    color: white!important;
+}
+
+/* Keyframes für den Glow-Effekt */
+@keyframes glow {
+    0% {
+        text-shadow:
+            0 0 5px rgba(255, 204, 0, 0.8),
+            0 0 10px rgba(255, 204, 0, 0.6),
+            0 0 15px rgba(255, 204, 0, 0.4);
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px rgba(255, 204, 0, 1),
+            0 0 20px rgba(255, 204, 0, 0.8),
+            0 0 30px rgba(255, 204, 0, 0.6);
+    }
+}
+
+
