@@ -45,8 +45,12 @@
         justify-content: center;
         align-items: center;
         font-size: 1.5rem; 
-        background-color: rgb(135 146 128 / 70%);
+        // background-color: rgb(135 146 128 / 70%);
         border-radius: 60px;
+        &:hover{
+            filter: brightness(1.05);
+            cursor: pointer;
+        }
     }
 }
 h2{
