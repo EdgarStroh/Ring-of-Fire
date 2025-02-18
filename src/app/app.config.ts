@@ -4,6 +4,7 @@ import { provideRouter } from '@angular/router';
 // import { routes } from './app.routes';
 import { StartScreenComponent } from './start-screen/start-screen.component';
 import { GameComponent } from './game/game.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 const routes = [
   { path: '', component: StartScreenComponent },
@@ -11,5 +12,5 @@ const routes = [
 ];
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
+  providers: [provideRouter(routes), provideAnimationsAsync()]
 };

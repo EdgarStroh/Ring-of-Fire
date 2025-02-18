@@ -46,3 +46,21 @@
         transform: scale(1.3) translateX(140px) translateY(-150px) rotate(-10deg);
     }
 }
+
+.player-position {
+    position: absolute;
+    right: 0;
+}
+.btn-add{
+    position:absolute;
+    right: 32px;
+    bottom: 32px;
+}
+
+.pin-bottom{
+    text-align: center;
+    position: absolute;
+    bottom: 32px;
+    left: 100px;
+    right: 100px;
+}
