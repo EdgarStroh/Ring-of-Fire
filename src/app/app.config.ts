@@ -16,7 +16,7 @@ import { environment } from '../environments/environment';
 
 const routes = [
   { path: '', component: StartScreenComponent },
-  { path: 'game', component: GameComponent },
+  { path: 'game/:id', component: GameComponent },
 ];
 
 export const appConfig: ApplicationConfig = {
