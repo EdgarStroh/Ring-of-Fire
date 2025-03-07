@@ -11,11 +11,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { GameInfoComponent } from "../game-info/game-info.component";
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { PlayerMobileComponent } from "../player-mobile/player-mobile.component";
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent, MatIconModule, MatButtonModule, MatDialogModule, GameInfoComponent],
+  imports: [CommonModule, PlayerComponent, MatIconModule, MatButtonModule, MatDialogModule, GameInfoComponent, PlayerMobileComponent],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })

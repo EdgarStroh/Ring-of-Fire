@@ -5,10 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Hintergrundbild wird skaliert */
     position: relative;
     background-image: url("../../assets/img/background/startscreen.jpg");
-    object-fit: cover;
 }
+
 
 .start-screen-overlay {
     width: 400px;
