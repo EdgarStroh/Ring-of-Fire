@@ -11,5 +11,5 @@ export class PlayerComponent {
 
   @Input() name?: string;
   @Input() playerActive: boolean = false;
-
+  @Input() image = 'avatar.png'
 }
