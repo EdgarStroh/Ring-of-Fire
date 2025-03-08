@@ -25,7 +25,7 @@ export class GameComponent {
   game: Game = new Game();
   gameId: string = '';  // ID des Spiels
   game$!: Observable<Game | undefined>;
-
+  gameOver = false;
   constructor(
     private route: ActivatedRoute,
     public dialog: MatDialog,
@@ -97,7 +97,9 @@ export class GameComponent {
     });
   }
   takeCard() {
-    if (!this.game.pickCardAnimation) {
+    if (this.game.stack.length == 0) {
+      this.gameOver = true;
+    } else if (!this.game.pickCardAnimation) {
       this.game.currentCard = this.game.stack.pop() || '';
       this.game.pickCardAnimation = true;
       this.game.currentPlayer++;
@@ -130,9 +132,16 @@ export class GameComponent {
 
     const dialogRef = this.dialog.open(EditPlayerComponent);
     dialogRef.afterClosed().subscribe((change: string) => {
-      console.log('received change', change);
-      this.game.player_images[playerId] = change;
-      this.updateGame();
+      if (change) {
+        if (change == 'DELETE') {
+          this.game.players.splice(playerId, 1);
+          this.game.player_images.splice(playerId, 1);
+        } else {
+          console.log('received change', change);
+          this.game.player_images[playerId] = change;
+        }
+        this.updateGame();
+      }
     });
   }
 }
